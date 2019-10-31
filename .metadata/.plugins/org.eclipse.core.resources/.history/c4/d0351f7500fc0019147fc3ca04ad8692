@@ -106,6 +106,10 @@ public class C1Profesores {
 		}
 	}
 	
+	public void insertarProfesorComprobacion() {
+		
+	}
+	
 	public void borrarProfesores(C1Profesores p) {
 		ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
         ObjectSet res=bd.queryByExample(p);
@@ -129,20 +133,20 @@ public class C1Profesores {
 	public void actualizarProfesores(int cod,String nombre,String nombrees,String fechanac,String sexo,C1Centros cen) {
         ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
         try {
-	        ObjectSet res = bd.queryByExample(new C1Profesores(cod,null,null, null, null, null));
-	        C1Profesores a=(C1Profesores)res.next();
-	        a.setNombreApe(nombre);
-	        a.setNombreEspe(nombrees);
-	        a.setFechaNac(fechanac);
-	        a.setSexo(sexo);
-	        a.setC1Centros(cen);
-	        bd.store(a);
-	        System.out.println("Profesor modificado");
-	    }catch(IllegalStateException ex) {
-	    	System.out.println("ERROR"+ex);
-	    }
-	        bd.close();
-	    }
+        ObjectSet res = bd.queryByExample(new C1Profesores(cod,null,null, null, null, null));
+        C1Profesores a=(C1Profesores)res.next();
+        a.setNombreApe(nombre);
+        a.setNombreEspe(nombrees);
+        a.setFechaNac(fechanac);
+        a.setSexo(sexo);
+        a.setC1Centros(cen);
+        bd.store(a);
+        System.out.println("Profesor modificado");
+    }catch(IllegalStateException ex) {
+    	System.out.println("NOPE"+ex);
+    }
+        bd.close();
+    }
 	
 	public C1Profesores obtenerProfesor(int id) {
         ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");

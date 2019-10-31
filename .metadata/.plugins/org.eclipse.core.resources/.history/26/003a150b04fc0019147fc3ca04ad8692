@@ -95,13 +95,12 @@ public class C1Asignaturas {
         bd.close();
 	}
 	
-	public void actualizarAsignatura(String cod,String nombre, ArrayList<C1Profesores> temp) {
+	public void actualizarAsignatura(String cod,String nombre) {
 		ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
 		ObjectSet res = bd.queryByExample(new C1Asignaturas(cod,null,null));
 		C1Asignaturas a=(C1Asignaturas)res.next();
         a.setCodAsig(cod);
         a.setNombreAsi(nombre);
-        a.setSetprofesores(temp);
         bd.store(a);
         bd.close();
 	}

@@ -124,13 +124,12 @@ public class C1Centros {
         bd.close();
 	}
 	
-	public void actualizarCentros(Integer cod, String nombre, C1Profesores director, String direccion, String localidad, String provincia) {
+	public void actualizarCentros(Integer cod, String nombre, String direccion, String localidad, String provincia) {
 		ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
 		ObjectSet res = bd.queryByExample(new C1Centros(cod,null,null,null,null,null));
 		C1Centros c =(C1Centros)res.next();
         c.setCodCentro(cod);
         c.setNomCentro(nombre);
-        c.setDirector(director);
         c.setDireccion(direccion);
         c.setLocalidad(localidad);
         c.setProvincia(provincia);
@@ -139,33 +138,30 @@ public class C1Centros {
 	}
 	
 	public C1Centros obtenerCentros(int id) {
-		ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
-		C1Centros c = new C1Centros(id,null,null,null,null,null);
-		 ObjectSet res = bd.queryByExample(c);
-		if(!res.isEmpty()) {
-		C1Centros c1 = (C1Centros)res.next();
-			bd.close();
-			return c1;
-		}else {
-			System.out.println("Centro no encontrado");
-			bd.close();
-			return null;	
-		}
-	}
-	
-	public void verProfesores(int cod) {
         ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
-        C1Centros c = new C1Centros(cod,null,null,null,null,null);
+        C1Centros c = new C1Centros(id,null,null,null,null,null);
+         ObjectSet res = bd.queryByExample(c);
+        if(!res.isEmpty()) {
+        C1Centros c1 = (C1Centros)res.next();
+            bd.close();
+            return c1;
+        }else {
+            System.out.println("Centro no encontrado");
+            bd.close();
+            return null;
+        }
+    }
+	
+	public void VerProfesores(int id) {
+		ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos4.db4o");
+        C1Centros c = new C1Centros(id,null,null,null,null,null);
         ObjectSet res = bd.queryByExample(c);
-        try {
+
         c = (C1Centros) res.next();
         C1Profesores p = new C1Profesores(0,null,null,null,null,c);
         ObjectSet res1 = bd.queryByExample(p);
         while(res1.hasNext()) {
             System.out.println(res1.next());
-        }
-        }catch(IllegalStateException e) {
-            System.out.println("No se ha encontrado el centro");
         }
         bd.close();
     }

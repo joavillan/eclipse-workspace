@@ -101,7 +101,6 @@ public class C1Asignaturas {
 		C1Asignaturas a=(C1Asignaturas)res.next();
         a.setCodAsig(cod);
         a.setNombreAsi(nombre);
-        a.setSetprofesores(temp);
         bd.store(a);
         bd.close();
 	}

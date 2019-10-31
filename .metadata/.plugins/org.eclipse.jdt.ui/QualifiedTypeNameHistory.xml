@@ -45,7 +45,6 @@
 <fullyQualifiedTypeName name="ej4.MyHilo"/>
 <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="ej6.HiloPrioridad1"/>
-<fullyQualifiedTypeName name="utiles.Libreria"/>
 <fullyQualifiedTypeName name="logica.Menu"/>
 <fullyQualifiedTypeName name="modelos.Ventas"/>
 <fullyQualifiedTypeName name="modelos.Articulos"/>
@@ -56,8 +55,9 @@
 <fullyQualifiedTypeName name="com.db4o.ObjectContainer"/>
 <fullyQualifiedTypeName name="com.db4o.Db4oEmbedded"/>
 <fullyQualifiedTypeName name="com.db4o.ObjectSet"/>
-<fullyQualifiedTypeName name="modelos.C1Asignaturas"/>
-<fullyQualifiedTypeName name="modelos.C1Centros"/>
-<fullyQualifiedTypeName name="modelos.C1Profesores"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="utiles.Libreria"/>
+<fullyQualifiedTypeName name="modelos.C1Asignaturas"/>
+<fullyQualifiedTypeName name="modelos.C1Profesores"/>
+<fullyQualifiedTypeName name="modelos.C1Centros"/>
 </qualifiedTypeNameHistroy>

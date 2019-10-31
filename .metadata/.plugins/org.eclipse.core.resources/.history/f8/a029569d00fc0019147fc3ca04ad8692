@@ -106,6 +106,10 @@ public class C1Profesores {
 		}
 	}
 	
+	public void insertarProfesorComprobacion() {
+		
+	}
+	
 	public void borrarProfesores(C1Profesores p) {
 		ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
         ObjectSet res=bd.queryByExample(p);

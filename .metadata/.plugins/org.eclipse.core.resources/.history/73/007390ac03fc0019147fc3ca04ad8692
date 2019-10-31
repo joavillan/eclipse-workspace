@@ -122,18 +122,9 @@ public class Menu {
 	        		 opcion = a1.excepcionintcontexto("¿Que quieres actualizar? (1)Asignatura, (2)Centro, (3)Profesor, (4)Salir");
 	        		 switch (opcion) {
 					case 1:
-						//a.actualizarAsignatura(a1.excepcionstringcontexto("Codigo:"),a1.excepcionstringcontexto("Nombre:"));
-						ArrayList<C1Profesores> temp = new ArrayList();
-	                    String nom="";
-	                    do {
-	                        temp.add(p.obtenerProfesor(a1.excepcionintcontexto("ID profesor:")));
-	                        nom=a1.excepcionstringcontexto("Desea continuar insertando profesores en asignaturas? Y/N");
-	                    }while(!nom.equalsIgnoreCase("n"));
-	                    //a= new C1Asignaturas(a1.excepcionstringcontexto("Codigo:"),a1.excepcionstringcontexto("Nombre:"),temp);
-	                    a.actualizarAsignatura(a1.excepcionstringcontexto("Codigo asignatura:"), a1.excepcionstringcontexto("Nombre:"), temp);
+						a.actualizarAsignatura(a1.excepcionstringcontexto("Codigo:"),a1.excepcionstringcontexto("Nombre:"));
 						break;
 					case 2:
-						c.actualizarCentros(a1.excepcionintcontexto("Codigo"), a1.excepcionstringcontexto("Nombre:"), p.obtenerProfesor(a1.excepcionintcontexto("ID profesor:")), a1.excepcionstringcontexto("Direccion:"),  a1.excepcionstringcontexto("Localidad:"),  a1.excepcionstringcontexto("Provincia:"));
 						//c.actualizarCentros(a1.excepcionintcontexto("Codigo:"),a1.excepcionstringcontexto("Nombre:"),p = new C1Profesores(a1.excepcionintcontexto("Codigo profesor:"),a1.excepcionstringcontexto("Nombre profesor:"),a1.excepcionstringcontexto("Especialidad:"),a1.excepcionstringcontexto("Fecha nacimiento:"),a1.excepcionstringcontexto("Sexo:"),null),a1.excepcionstringcontexto("Direccion:"),a1.excepcionstringcontexto("Localidad:"),a1.excepcionstringcontexto("Provincia"));
 						break;
 					case 3:
@@ -150,7 +141,7 @@ public class Menu {
 				} while (opcion != 4);
 	             break;
 	         case 5:
-	        	 c.verProfesores(a1.excepcionintcontexto("Codigo:"));
+	        	 c.VerProfesores(a1.excepcionintcontexto("Codigo:"));
 	             break;
 	         case 6:
 	        	 p.consultarAsignaturas(p = new C1Profesores(a1.excepcionintcontexto("Codigo:"),null,null,null,null,null));

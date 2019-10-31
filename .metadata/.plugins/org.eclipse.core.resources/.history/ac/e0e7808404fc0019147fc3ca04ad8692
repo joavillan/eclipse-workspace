@@ -133,7 +133,6 @@ public class Menu {
 	                    a.actualizarAsignatura(a1.excepcionstringcontexto("Codigo asignatura:"), a1.excepcionstringcontexto("Nombre:"), temp);
 						break;
 					case 2:
-						c.actualizarCentros(a1.excepcionintcontexto("Codigo"), a1.excepcionstringcontexto("Nombre:"), p.obtenerProfesor(a1.excepcionintcontexto("ID profesor:")), a1.excepcionstringcontexto("Direccion:"),  a1.excepcionstringcontexto("Localidad:"),  a1.excepcionstringcontexto("Provincia:"));
 						//c.actualizarCentros(a1.excepcionintcontexto("Codigo:"),a1.excepcionstringcontexto("Nombre:"),p = new C1Profesores(a1.excepcionintcontexto("Codigo profesor:"),a1.excepcionstringcontexto("Nombre profesor:"),a1.excepcionstringcontexto("Especialidad:"),a1.excepcionstringcontexto("Fecha nacimiento:"),a1.excepcionstringcontexto("Sexo:"),null),a1.excepcionstringcontexto("Direccion:"),a1.excepcionstringcontexto("Localidad:"),a1.excepcionstringcontexto("Provincia"));
 						break;
 					case 3:
@@ -150,7 +149,7 @@ public class Menu {
 				} while (opcion != 4);
 	             break;
 	         case 5:
-	        	 c.verProfesores(a1.excepcionintcontexto("Codigo:"));
+	        	 c.VerProfesores(a1.excepcionintcontexto("Codigo:"));
 	             break;
 	         case 6:
 	        	 p.consultarAsignaturas(p = new C1Profesores(a1.excepcionintcontexto("Codigo:"),null,null,null,null,null));

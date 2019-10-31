@@ -139,7 +139,7 @@ public class C1Centros {
 	}
 	
 	public C1Centros obtenerCentros(int id) {
-		ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
+		ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"Colegio.db4o");
 		C1Centros c = new C1Centros(id,null,null,null,null,null);
 		 ObjectSet res = bd.queryByExample(c);
 		if(!res.isEmpty()) {
@@ -153,20 +153,14 @@ public class C1Centros {
 		}
 	}
 	
-	public void verProfesores(int cod) {
-        ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
-        C1Centros c = new C1Centros(cod,null,null,null,null,null);
+	public void VerProfesores(int id) {
+		ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos4.db4o");
+        C1Centros c = new C1Centros(id,null,null,null,null,null);
         ObjectSet res = bd.queryByExample(c);
-        try {
         c = (C1Centros) res.next();
         C1Profesores p = new C1Profesores(0,null,null,null,null,c);
         ObjectSet res1 = bd.queryByExample(p);
-        while(res1.hasNext()) {
-            System.out.println(res1.next());
-        }
-        }catch(IllegalStateException e) {
-            System.out.println("No se ha encontrado el centro");
-        }
+        System.out.println(res1.next());
         bd.close();
     }
 }
