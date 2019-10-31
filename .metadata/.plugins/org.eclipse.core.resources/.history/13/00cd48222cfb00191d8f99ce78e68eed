@@ -1,0 +1,44 @@
+package modelos;
+
+import java.util.ArrayList;
+import java.util.Set; 
+
+class C1Asignaturas {
+
+	private String codAsig;
+	private String nombreAsi;
+	private ArrayList<C1Profesores> setprofesores;
+	
+	public C1Asignaturas() {
+		
+	}
+	
+	public C1Asignaturas(String codAsig, String nombreAsi) {
+		this.codAsig = codAsig;
+		this.nombreAsi = nombreAsi;
+	}
+
+	public String getCodAsig() {
+		return codAsig;
+	}
+
+	public void setCodAsig(String codAsig) {
+		this.codAsig = codAsig;
+	}
+
+	public String getNombreAsi() {
+		return nombreAsi;
+	}
+
+	public void setNombreAsi(String nombreAsi) {
+		this.nombreAsi = nombreAsi;
+	}
+	
+	public ArrayList<C1Profesores> getSetprofesores() {
+		return setprofesores;
+	}
+
+	public void setSetprofesores(ArrayList<C1Profesores> setprofesores) {
+		this.setprofesores = setprofesores;
+	}
+}

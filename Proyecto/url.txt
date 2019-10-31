@@ -1,0 +1,4 @@
+jdbc:mysql://jvillegas.salesianas.es/
+jvillegas_proyecto7
+jvill_bbdd
+Salesianas1**

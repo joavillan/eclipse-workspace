@@ -1,0 +1,65 @@
+package menu;
+
+import java.io.IOException;
+
+import modelos.C1Asignaturas;
+import modelos.C1Centros;
+import modelos.C1Profesores;
+import utiles.Libreria;
+
+public class Menu {
+
+	public void menu() throws IOException {
+		 int opcion;
+		 
+		 C1Asignaturas a = new C1Asignaturas();
+		 C1Centros c = new C1Centros();
+		 C1Profesores p = new C1Profesores();
+	     Libreria a1 = new Libreria();
+	     
+	     do {
+	         opcion = a1.excepcionintcontexto(
+	                 "1-Visualizar datos de ventas. \n"
+	                 + " 2-Visualizar de artículos. \n"
+	                 + " 3-Informe Clientes. \n"
+	                 + " 4-Artículo mas vendido. \n"
+	                 + " 5-Media de importe ventas por artículo. \n"
+	                 + " 6-Cliente que mas ha gastado. \n"
+	                 + " 7-Cliente con mas ventas. \n"
+	                 + " 8-Salir"
+	                 );
+	         switch(opcion) {
+	         case 1:
+	             Ventas v = new Ventas(a1.excepcionintcontexto("Codigo Venta:"),null, null, 0, null);
+	             f.VisualizarVentas(v);
+	             break;
+	         case 2:
+	        	 Articulos a = new Articulos(a1.excepcionintcontexto("Codigo Articulo:"), null, 0, 0);
+	             f.VisualizarArticulos(a);
+	             break;
+	         case 3:
+	        	 Clientes c = new Clientes(a1.excepcionintcontexto("Codigo Cliente:"),null,null);
+	             f.VisualizarClientes(c);
+	             break;
+	         case 4:
+	        	 
+	             break;
+	         case 5:
+	        	 
+	             break;
+	         case 6:
+	        	 
+	             break;
+	         case 7:
+	        	 
+	             break;
+	         default:
+	        	 System.out.println("ERROR. Vuelva a elegir opcion");
+	             break;
+	         }
+
+
+	         }while(opcion!=8);
+	
+	}
+}

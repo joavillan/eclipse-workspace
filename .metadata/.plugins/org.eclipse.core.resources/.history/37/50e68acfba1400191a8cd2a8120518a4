@@ -1,0 +1,19 @@
+package prueba;
+
+import utiles.Libreria;
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Libreria a1 = new Libreria();
+		
+		String cadena = "Hola, muchacho";
+		
+		cadena=a1.invertircadena(cadena);
+		
+		System.out.println(cadena);
+	}
+
+}

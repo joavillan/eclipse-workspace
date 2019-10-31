@@ -1,0 +1,21 @@
+package modelos;
+
+import java.util.Date;
+
+public class C1Profesores {
+
+	private Integer codProf;
+	private String nombreApe;
+	private String nombreEspe;
+	private Date fechaNac;
+	private String sexo;
+	private C1Centros c1Centros;
+	
+	public C1Profesores() {
+		
+	}
+	
+	public C1Profesores(Integer codProf, String nombreApe, String nombreEspe, Date fechaNac, String sexo, C1Centros c1Centros) {
+		
+	}
+}

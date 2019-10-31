@@ -1,0 +1,41 @@
+package logica;
+
+import com.db4o.Db4oEmbedded;
+import com.db4o.ObjectContainer;
+import com.db4o.ObjectSet;
+
+import modelos.Articulos;
+import modelos.Clientes;
+import modelos.Ventas;
+
+public class funciones {
+
+	 ObjectContainer bd=Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"basedatos.db4o");
+
+	    public void VisualizarVentas(Ventas v) {
+	        ObjectSet res= bd.queryByExample(v);
+	        while(res.hasNext()) {
+	            System.out.println(res.next());
+	        }
+	        bd.close();
+
+	    }
+	    
+	    public void VisualizarClientes(Clientes c) {
+	        ObjectSet res= bd.queryByExample(c);
+	        while(res.hasNext()) {
+	            System.out.println(res.next());
+	        }
+	        bd.close();
+
+	    }
+	    
+	    public void VisualizarArticulos(Articulos a) {
+	        ObjectSet res= bd.queryByExample(a);
+	        while(res.hasNext()) {
+	            System.out.println(res.next());
+	        }
+	        bd.close();
+
+	    }
+}
